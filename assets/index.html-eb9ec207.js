@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3c0f9a24","path":"/en/quickStarted/","title":"Tencent Cloud Code Analysis","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1715854977000,"contributors":[{"name":"Faberi","email":"105088205+Faberiii@users.noreply.github.com","commits":1}]},"filePathRelative":"en/quickStarted/README.md"}');export{e as data};
