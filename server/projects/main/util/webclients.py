@@ -121,6 +121,10 @@ class AnalyseClient(BaseClient):
                 "path": "api/projects/",
                 "method": "post",
             },
+            "delete_project": {
+                "path": "api/projects/%d/delete/",
+                "method": "delete",
+            },
             "create_scan": {
                 "path": "api/projects/%d/scans/",
                 "method": "post",

@@ -68,6 +68,22 @@ class ProjectCreateApiView(APIView):
             return Response(data={"msg": "project %s has exist" % project_id}, status=status.HTTP_400_BAD_REQUEST)
 
 
+
+class ProjectSoftDeleteApiView(generics.DestroyAPIView):
+    """软删除项目
+    """
+
+    schema = None
+    serializer_class = serializers.ProjectSerializer
+    authentication_classes = (MainServerInternalAuthentication,)
+    queryset = models.Project.objects.all()
+    lookup_url_kwarg = "project_id"
+
+    def get_object(self):
+        return get_object_or_404(models.Project, id=self.kwargs["project_id"])
+
+
+
 class ProjectScanListCreateApiView(generics.ListCreateAPIView, ProjectBaseAPIView):
     """项目扫描列表接口
     使用对象：服务内部
